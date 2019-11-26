@@ -5,7 +5,6 @@ categories:
   - 小问题
 tags:
   - hexo
-  - GitHub Pages
   - blog
 ---
 
@@ -75,3 +74,29 @@ hexo d == hexo deploy             #部署
 #### 使用另一个分支保存源码
 
 由于`master`分支里保存的是我们生成出来的文件，而源码是存在本地的，为了当我换一台电脑也能继续更新，我需要把源码存到 github 里，所以新建了一个`hexo`分支，把源码存在里面。这样当我源码有改动时也能同步更新了。
+
+#### 开始写文章啦
+
+当我们执行`hexo new`的命令后，会在 source 文件夹下看到我们新建的`.md`文件，顶端以`---`分隔的区域，叫做 Front-matter，我们可以在里面配置这篇文章的信息。
+如果要给文章添加 tags 和分类，可以如下设置
+
+```yaml
+categories:
+  - Diary
+tags:
+  - PS3
+  - Games
+```
+
+Front-matter 的下面就可以开始用 markdown 的语法写文章了。
+
+#### 使用本地图片插件 hexo-asset-image
+
+先将`_config.yml`的`post_asset_folder`改为 true，然后运行以下命令：
+
+```bash
+npm install https://github.com/CodeFalling/hexo-asset-image --save
+```
+
+这样可以解决在使用本地图片时，本地图片和线上图片路径不一致的问题，本地预览时也可以显示出图片。
+而且不用把分散的文章里的图片都放在一个总的 source 文件夹内，而是按照文章目录来放置，简单明了。
