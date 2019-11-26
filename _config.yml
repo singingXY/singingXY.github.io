@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: singingXY的blog
+title: sing's blog
 subtitle: ''
 description: ''
 keywords:
-author: singingXY
+author: Sing
 language: zh-CN
 timezone: ''
 
@@ -44,9 +44,10 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
+  enable: false
+  hljs: true #新增hljs参数，并设为true，不然无法使用highlight.js 官方的 css
+  line_number: false #暂不支持行号
+  auto_detect: false #这一项也关闭，若开启有可能报错
   tab_replace: ''
 
 # Home page setting
