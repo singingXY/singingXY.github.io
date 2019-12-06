@@ -2,7 +2,7 @@
 title: 来用hexo和GitHub Pages做个个人博客吧
 date: 2019-11-25 15:12:38
 categories:
-  - 小问题
+  - 笔记
 tags:
   - hexo
   - blog
