@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://singingxy.github.io/"/>
-  <updated>2019-12-23T06:52:22.728Z</updated>
+  <updated>2019-12-28T06:15:15.416Z</updated>
   <id>https://singingxy.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>理解MVVM</title>
+    <link href="https://singingxy.github.io/2019/Introduction-to-MVVM/"/>
+    <id>https://singingxy.github.io/2019/Introduction-to-MVVM/</id>
+    <published>2019-12-28T01:49:41.000Z</published>
+    <updated>2019-12-28T06:15:15.416Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;MVVM 是由 MVC 发展而来，通过在 Model 之上而在 View 之下增加一个非视觉的组件将来自 Model 的数据映射到 View 中。&lt;/p&gt;
+&lt;h3 id=&quot;MVC-Model-View-Controller&quot;&gt;MVC(Model-View-Controlle
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://singingxy.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="MVVM" scheme="https://singingxy.github.io/tags/MVVM/"/>
+    
+      <category term="MVC" scheme="https://singingxy.github.io/tags/MVC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用ssh连接Git仓库(Github\GitLab\CODING\码云等)</title>
     <link href="https://singingxy.github.io/2019/sshKey-Git/"/>
     <id>https://singingxy.github.io/2019/sshKey-Git/</id>
     <published>2019-12-23T00:22:16.000Z</published>
-    <updated>2019-12-23T06:52:22.728Z</updated>
+    <updated>2019-12-24T02:49:47.637Z</updated>
     
     <summary type="html">
     
@@ -50,7 +77,7 @@
     <link href="https://singingxy.github.io/2019/HTTP-request/"/>
     <id>https://singingxy.github.io/2019/HTTP-request/</id>
     <published>2019-12-13T05:15:33.000Z</published>
-    <updated>2019-12-22T03:24:16.130Z</updated>
+    <updated>2019-12-24T02:49:47.618Z</updated>
     
     <summary type="html">
     
@@ -76,7 +103,7 @@
     <link href="https://singingxy.github.io/2019/Expected-linebreaks-to-be-LF-but-found-CRLF/"/>
     <id>https://singingxy.github.io/2019/Expected-linebreaks-to-be-LF-but-found-CRLF/</id>
     <published>2019-12-07T02:47:53.000Z</published>
-    <updated>2019-12-22T03:24:16.129Z</updated>
+    <updated>2019-12-24T02:49:47.616Z</updated>
     
     <summary type="html">
     
@@ -104,7 +131,7 @@
     <link href="https://singingxy.github.io/2019/srcset-size/"/>
     <id>https://singingxy.github.io/2019/srcset-size/</id>
     <published>2019-12-06T00:12:18.000Z</published>
-    <updated>2019-12-22T03:24:16.147Z</updated>
+    <updated>2019-12-24T02:49:47.633Z</updated>
     
     <summary type="html">
     
@@ -130,7 +157,7 @@
     <link href="https://singingxy.github.io/2019/VS-Code-encoding/"/>
     <id>https://singingxy.github.io/2019/VS-Code-encoding/</id>
     <published>2019-11-30T05:23:25.000Z</published>
-    <updated>2019-12-22T03:24:16.133Z</updated>
+    <updated>2019-12-24T02:49:47.620Z</updated>
     
     <summary type="html">
     
@@ -156,7 +183,7 @@
     <link href="https://singingxy.github.io/2019/hexo-themes-push/"/>
     <id>https://singingxy.github.io/2019/hexo-themes-push/</id>
     <published>2019-11-27T02:38:11.000Z</published>
-    <updated>2019-12-22T03:24:16.141Z</updated>
+    <updated>2019-12-24T02:49:47.627Z</updated>
     
     <summary type="html">
     
@@ -180,7 +207,7 @@
     <link href="https://singingxy.github.io/2019/WIN10%E5%BC%80%E6%9C%BA%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/"/>
     <id>https://singingxy.github.io/2019/WIN10%E5%BC%80%E6%9C%BA%E5%86%85%E5%AD%98%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98/</id>
     <published>2019-11-26T02:55:33.000Z</published>
-    <updated>2019-12-22T03:24:16.138Z</updated>
+    <updated>2019-12-24T02:49:47.624Z</updated>
     
     <summary type="html">
     
@@ -208,7 +235,7 @@
     <link href="https://singingxy.github.io/2019/%E6%9D%A5%E7%94%A8hexo%E5%92%8CGitHub%20Pages%E5%81%9A%E4%B8%AA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%90%A7/"/>
     <id>https://singingxy.github.io/2019/%E6%9D%A5%E7%94%A8hexo%E5%92%8CGitHub%20Pages%E5%81%9A%E4%B8%AA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%90%A7/</id>
     <published>2019-11-25T07:12:38.000Z</published>
-    <updated>2019-12-22T03:24:16.152Z</updated>
+    <updated>2019-12-24T02:49:47.638Z</updated>
     
     <summary type="html">
     
@@ -234,7 +261,7 @@
     <link href="https://singingxy.github.io/2019/hello-world/"/>
     <id>https://singingxy.github.io/2019/hello-world/</id>
     <published>2019-11-25T03:01:26.000Z</published>
-    <updated>2019-12-22T03:24:16.139Z</updated>
+    <updated>2019-12-24T02:49:47.626Z</updated>
     
     <summary type="html">
     
