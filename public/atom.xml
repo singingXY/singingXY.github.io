@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://singingxy.github.io/"/>
-  <updated>2019-12-28T06:15:15.416Z</updated>
+  <updated>2020-01-02T03:30:54.514Z</updated>
   <id>https://singingxy.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>flex布局</title>
+    <link href="https://singingxy.github.io/2020/flex/"/>
+    <id>https://singingxy.github.io/2020/flex/</id>
+    <published>2020-01-02T01:15:30.000Z</published>
+    <updated>2020-01-02T03:30:54.514Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Flexible Box 模型&lt;/p&gt;
+&lt;h3 id=&quot;使用-flex-布局的优势&quot;&gt;使用 flex 布局的优势&lt;a class=&quot;post-anchor&quot; href=&quot;#使用-flex-布局的优势&quot;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;可在不同方向排列元素&lt;/li&gt;
+&lt;l
+      
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="https://singingxy.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="flex" scheme="https://singingxy.github.io/tags/flex/"/>
+    
+      <category term="css" scheme="https://singingxy.github.io/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>理解MVVM</title>
