@@ -11,6 +11,8 @@ tags:
 
 总的说主要操作是在本地生成 ssh Key，然后把 ssh Key 添加到 Github/GitLab 的账户上，完成连接。
 
+<!--more-->
+
 ### 检查现有 ssh 密钥
 
 打开 Git Bash 终端。

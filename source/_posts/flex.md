@@ -17,6 +17,8 @@ flex（ Flexible Box：弹性布局盒模型），用来为盒模型提供最大
 3. 控制元素的对齐方式
 4. 控制元素之间等距
 
+<!--more-->
+
 ### 基本概念
 
 1. flex container: Flex 容器
@@ -33,8 +35,7 @@ Flex 容器的所有子元素自动成为 Flex 项目。
 
 ```css
 .container {
-  flex-direction: row | row-reverse | column |
-    column-reverse;
+  flex-direction: row | row-reverse | column | column-reverse;
 }
 ```
 
@@ -63,8 +64,7 @@ wrap-reverse：换行，第一行在下方。
 
 ```css
 .container {
-  justify-content: flex-start | flex-end | center |
-    space-between | space-around;
+  justify-content: flex-start | flex-end | center | space-between | space-around;
 }
 ```
 
@@ -80,8 +80,7 @@ space-around：每个项目两侧的间隔相等，所以项目之间的间隔�
 
 ```css
 .container {
-  align-items: flex-start | flex-end | center | baseline |
-    stretch;
+  align-items: flex-start | flex-end | center | baseline | stretch;
 }
 ```
 
@@ -97,8 +96,8 @@ stretch（默认值）：如果项目未设置高度或设为 auto，将占满�
 
 ```css
 .container {
-  align-content: flex-start | flex-end | center |
-    space-between | space-around | stretch;
+  align-content: flex-start | flex-end | center | space-between | space-around |
+    stretch;
 }
 ```
 
@@ -149,7 +148,6 @@ stretch（默认值）：轴线占满整个交叉轴。
 
 ```css
 .item {
-  align-self: auto | flex-start | flex-end | center |
-    baseline | stretch;
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }
 ```

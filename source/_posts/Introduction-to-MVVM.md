@@ -10,6 +10,8 @@ tags:
 
 MVVM 是由 MVC 发展而来，通过在 Model 之上而在 View 之下增加一个非视觉的组件将来自 Model 的数据映射到 View 中。
 
+<!--more-->
+
 ### MVC(Model-View-Controller)
 
 - 视图（View）：用户界面，展示 UI 界面和响应用户交互

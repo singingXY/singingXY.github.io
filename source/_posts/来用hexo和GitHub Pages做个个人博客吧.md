@@ -13,6 +13,8 @@ tags:
 GitHub Pages 的配置页面里推荐了 Jekyll，本来打算就从 Jekyll 开始摸索的，去主页看了文档，需要 Ruby 和 RubyGems ，光是下载 Ruby 这一步就把我卡住了，下载速度为 0。行吧。
 只能把目光转向了 hexo，一看环境只需要 node.js，用 npm 直接安装就可以，太方便了。
 
+<!--more-->
+
 #### 开始安装
 
 先把 hexo 装上

@@ -13,6 +13,8 @@ VS Code 升级后有关 ESlint 自动修复的配置有变更。
 ![](vscode-eslint/1.png)
 这个设置项已经弃用了，请使用 `editor.codeActionsOnSave` 和 `source.fixAll.eslint`。
 
+<!--more-->
+
 于是改成了下面这样：
 
 ```json
