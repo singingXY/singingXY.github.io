@@ -97,7 +97,7 @@ Front-matter 的下面就可以开始用 markdown 的语法写文章了。
 先将`_config.yml`的`post_asset_folder`改为 true，然后运行以下命令：
 
 ```bash
-npm install https://github.com/CodeFalling/hexo-asset-image --save
+npm install https://github.com/xcodebuild/hexo-asset-image --save
 ```
 
 这样可以解决在使用本地图片时，本地图片和线上图片路径不一致的问题，本地预览时也可以显示出图片。
