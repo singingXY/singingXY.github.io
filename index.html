@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="generator" content="Hexo 6.2.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -117,7 +117,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -158,6 +158,101 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://singingxy.github.io/2022/%E4%BD%BF%E7%94%A8sass%E8%BF%9B%E8%A1%8CHSL%E8%AE%A1%E7%AE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sing">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sing's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/%E4%BD%BF%E7%94%A8sass%E8%BF%9B%E8%A1%8CHSL%E8%AE%A1%E7%AE%97/" class="post-title-link" itemprop="url">使用sass进行HSL计算</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-07 18:10:25" itemprop="dateCreated datePublished" datetime="2022-07-07T18:10:25+08:00">2022-07-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="什么是HSL"><a href="#什么是HSL" class="headerlink" title="什么是HSL"></a><strong>什么是HSL</strong></h2><p>　　很多朋友都听说过RGB颜色模型，即任何一种颜色，都是由红（Red）、绿（Green）、蓝（Blue）三原色以不同的比例相加而成的。<br>　　但是RGB模型对人类而言并不直观，比如我说一种颜色是由60%红，30%绿和90%蓝组成的，你应该很难想象出来，这到底是哪种颜色？<br>　　因此人们设计出了HSL色彩空间，来更加直观的表达颜色。HSL是色相（Hue）、饱和度（Saturation）和亮度（Lightness）这三个颜色属性的简称。</p>
+<p>　　<strong>色相（Hue）是色彩的基本属性，就是人们平常所说的颜色名称，如紫色、青色、品红等等。我们可以在一个圆环上表示出所有的色相。</strong></p>
+<p><img src="/2022/%E4%BD%BF%E7%94%A8sass%E8%BF%9B%E8%A1%8CHSL%E8%AE%A1%E7%AE%97/1.png" alt="色相"></p>
+<p>　　色环上的0度、120度、240度位置，分别对应了RGB模型的红、绿、蓝三原色。原色两两混合形成了二次色。比如黄色（60度）就是由红色和绿色混合而成；蓝色和绿色则相加形成青色（180度）；品红（300度）则由红蓝两色组成。</p>
+<p>　　<strong>饱和度（Saturation）是指色彩的纯度，饱和度越高色彩越纯越浓，饱和度越低则色彩变灰变淡。</strong></p>
+<p><img src="/2022/%E4%BD%BF%E7%94%A8sass%E8%BF%9B%E8%A1%8CHSL%E8%AE%A1%E7%AE%97/2.png" alt="饱和度"></p>
+<p>　　<strong>亮度（Lightness）指的是色彩的明暗程度，亮度值越高，色彩越白，亮度越低，色彩越黑。</strong></p>
+<p><img src="/2022/%E4%BD%BF%E7%94%A8sass%E8%BF%9B%E8%A1%8CHSL%E8%AE%A1%E7%AE%97/3.png" alt="亮度"></p>
+<p>　　我们把<strong>色相（Hue）、饱和度（Saturation）和亮度（Lightness）</strong>三个属性整合到一个圆柱中，就形成了HSL色彩空间模型。</p>
+<p><img src="/2022/%E4%BD%BF%E7%94%A8sass%E8%BF%9B%E8%A1%8CHSL%E8%AE%A1%E7%AE%97/4.png" alt="HSL色彩空间"></p>
+<h2 id="sass中对hsl颜色的计算"><a href="#sass中对hsl颜色的计算" class="headerlink" title="sass中对hsl颜色的计算"></a><strong>sass中对hsl颜色的计算</strong></h2><p><code>adjust-hue($color, $degrees)</code>: 修改给定颜色的色相值。<br>使用-360deg 到 360deg之间的角度，然后返架指定颜色hue旋转这个角度后有颜色(正：顺时针方向，负：逆时针方向)。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adjust-hue(hsl(<span class="number">120</span>, <span class="number">30%</span>, <span class="number">90%</span>), <span class="number">60deg</span>) =&gt; hsl(<span class="number">180</span>, <span class="number">30%</span>, <span class="number">90%</span>)</span><br><span class="line">adjust-hue(hsl(<span class="number">120</span>, <span class="number">30%</span>, <span class="number">90%</span>), -<span class="number">60deg</span>) =&gt; hsl(<span class="number">60</span>, <span class="number">30%</span>, <span class="number">90%</span>)</span><br><span class="line">adjust-hue(<span class="selector-id">#811</span>, <span class="number">45deg</span>) =&gt; <span class="selector-id">#886a11</span></span><br></pre></td></tr></table></figure>
+
+<p><code>lighten($color, $amount)</code>: 使一个颜色更亮。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lighten(hsl(<span class="number">0</span>, <span class="number">0%</span>, <span class="number">0%</span>), <span class="number">30%</span>) =&gt; hsl(<span class="number">0</span>, <span class="number">0</span>, <span class="number">30</span>)</span><br></pre></td></tr></table></figure>
+<p><code>darken($color, $amount)</code>: 使一个颜色变暗。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">darken(hsl(<span class="number">25</span>, <span class="number">100%</span>, <span class="number">80%</span>), <span class="number">30%</span>) =&gt; hsl(<span class="number">25</span>, <span class="number">100%</span>, <span class="number">50%</span>)</span><br></pre></td></tr></table></figure>
+
+<p><code>saturate($color, $amount)</code>: 使一个颜色更加饱和。<br><code>desaturate($color, $amount)</code>: 减少一个颜色的饱和度。</p>
+<p><code>adjust-color($color, [$red], [$green], [$blue], [$hue], [$saturation], [$lightness], [$alpha]) </code>: 对指定的颜色增加或减少相应一个或多个颜色值。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adjust-<span class="attribute">color</span>(<span class="selector-id">#102030</span>, $blue: <span class="number">5</span>) =&gt; <span class="number">#102035</span></span><br><span class="line"><span class="built_in">adjust-color</span>(<span class="number">#102030</span>, $red: -<span class="number">5</span>, $blue: <span class="number">5</span>) =&gt; <span class="number">#0b2035</span></span><br><span class="line"><span class="built_in">adjust-color</span>(<span class="built_in">hsl</span>(<span class="number">25</span>, <span class="number">100%</span>, <span class="number">80%</span>), $lightness: -<span class="number">30%</span>, $alpha: -<span class="number">0.4</span>) =&gt; <span class="built_in">hsla</span>(<span class="number">25</span>, <span class="number">100%</span>, <span class="number">50%</span>, <span class="number">0.6</span>)</span><br></pre></td></tr></table></figure>
+<p><code>scale-color($color, [$red], [$green], [$blue], [$saturation], [$lightness], [$alpha]) </code>: 通过调整颜色的一个或者多个属性获取一个流畅颜色。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scale-<span class="attribute">color</span>(hsl(<span class="number">120</span>, <span class="number">70%</span>, <span class="number">80%</span>), $lightness: <span class="number">50%</span>) =&gt; <span class="built_in">hsl</span>(<span class="number">120</span>, <span class="number">70%</span>, <span class="number">90%</span>)</span><br><span class="line"><span class="built_in">scale-color</span>(<span class="built_in">rgb</span>(<span class="number">200</span>, <span class="number">150%</span>, <span class="number">170%</span>), $green: -<span class="number">40%</span>, $blue: <span class="number">70%</span>) =&gt; <span class="built_in">rgb</span>(<span class="number">200</span>, <span class="number">90</span>, <span class="number">229</span>)</span><br><span class="line"><span class="built_in">scale-color</span>(<span class="built_in">hsl</span>(<span class="number">200</span>, <span class="number">70%</span>, <span class="number">80%</span>), $saturation: -<span class="number">90%</span>, $alpha: -<span class="number">30%</span>) =&gt; <span class="built_in">hsla</span>(<span class="number">200</span>, <span class="number">7%</span>, <span class="number">80%</span>, <span class="number">0.7</span>)</span><br></pre></td></tr></table></figure>
+<p><code>change-color($color, [$red], [$green], [$blue], [$hue], [$saturation], [$lightness], [$alpha]) </code>: 在该函数中传入的参数将直接替换原来的值，而不做任何的运算。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">change-<span class="attribute">color</span>(<span class="selector-id">#102030</span>, $blue: <span class="number">5</span>) =&gt; <span class="number">#102005</span></span><br><span class="line"><span class="built_in">change-color</span>(<span class="number">#102030</span>, $red: <span class="number">120</span>, $blue: <span class="number">5</span>) =&gt; <span class="number">#782005</span></span><br><span class="line"><span class="built_in">change-color</span>(<span class="built_in">hsl</span>(<span class="number">25</span>, <span class="number">100%</span>, <span class="number">80%</span>), $lightness: <span class="number">40%</span>, $alpha: <span class="number">0.8</span>) =&gt; <span class="built_in">hsla</span>(<span class="number">25</span>, <span class="number">100%</span>, <span class="number">40%</span>, <span class="number">0.8</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="项目中的实际应用"><a href="#项目中的实际应用" class="headerlink" title="项目中的实际应用"></a><strong>项目中的实际应用</strong></h2><p>比如智慧医院里有个功能叫“预问诊报告”，患者信息的部分有一个渐变。通过对当前主题色进行HSL计算，可以得到一个和UI几乎一致的渐变颜色效果。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.user-info</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">30</span>rpx;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">180deg</span>, <span class="built_in">hsl</span>(<span class="number">164</span>, <span class="number">94%</span>, <span class="number">34%</span>) <span class="number">0%</span>, <span class="built_in">hsl</span>(<span class="number">180</span>, <span class="number">100%</span>, <span class="number">30%</span>) <span class="number">100%</span>);</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.8</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">20</span>rpx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>UI图</p>
+<p><img src="/2022/%E4%BD%BF%E7%94%A8sass%E8%BF%9B%E8%A1%8CHSL%E8%AE%A1%E7%AE%97/5.png" alt="图片5.png#283px #371px"></p>
+<p>HSL计算效果</p>
+<p><img src="/2022/%E4%BD%BF%E7%94%A8sass%E8%BF%9B%E8%A1%8CHSL%E8%AE%A1%E7%AE%97/6.png" alt="图片6.png#277px #371px"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -871,94 +966,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://singingxy.github.io/2019/HTTP-request/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sing">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="sing's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/HTTP-request/" class="post-title-link" itemprop="url">HTTP请求</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-12-13 13:15:33" itemprop="dateCreated datePublished" datetime="2019-12-13T13:15:33+08:00">2019-12-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="一个完整的-HTTP-请求过程"><a href="#一个完整的-HTTP-请求过程" class="headerlink" title="一个完整的 HTTP 请求过程"></a>一个完整的 HTTP 请求过程</h3><ol>
-<li>建立 TCP 连接</li>
-<li>Web 浏览器向 Web 服务器发送请求命令</li>
-<li>Web 浏览器发送请求头信息</li>
-<li>Web 服务器应答</li>
-<li>Web 服务器发送应答头信息</li>
-<li>Web 服务器向浏览器发送数据</li>
-<li>Web 服务器关闭 TCP 连接</li>
-</ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/HTTP-request/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
@@ -972,7 +979,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
